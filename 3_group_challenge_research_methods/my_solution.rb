@@ -34,11 +34,11 @@ end
 
 
 # Person 3
-def my_array_sorting_method(source, thing_to_locate)
+def my_array_sorting_method(source)
   return source.push(thing_to_locate).sort_by{|word| word.downcase}
 end
 
-def my_hash_sorting_method(source, thing_to_locate)
+def my_hash_sorting_method(source)
   return source.sort_by{|name, age| age}
 end
 
