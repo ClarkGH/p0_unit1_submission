@@ -152,4 +152,7 @@ Which parts of the challenge did you enjoy?
 Which parts of the challenge did you find tedious?
 	None
 
+What did you learn about researching and explaining your research to others?
+	A lot, I actually wrote my findings in my main blog: http://glubnerdglub.blogspot.com/2014/03/ruby-medians-sort-and-sortby.html
+
 =end
