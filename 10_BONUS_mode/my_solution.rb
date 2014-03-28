@@ -27,17 +27,25 @@
 # 2. Initial Solution
 =begin
 
-def mode(array)
-	frequency = array.inject({}){|h, v| h[v] = array.count(v); h}
-	frequency.select { |h, v| v == frequency.values.max}.keys
+def mode(data)
+	frequency = data.inject({}) do |num, value|
+     num[value] = data.count(value); num
+	end
+	high_occurance = []
+	frequency.select do |num, value|
+	  if value == frequency.values.max
+	    high_occurance << num
+	  end
+	end
+	return high_occurance.sort
 end
 
 =end
 
 # 3. Refactored Solution
 
-def mode(array)
-	frequency = array.inject({}){|h, v| h[v] = array.count(v); h}
+def mode(data)
+	frequency = data.inject({}){|h, v| h[v] = data.count(v); h}
 	frequency.select { |h, v| v == frequency.values.max}.keys
 end
 
@@ -46,7 +54,7 @@ end
 	
 What parts of your strategy worked? What problems did you face?
 	I got stuck on this one. I didn't know how I was exactly supposed to find the frequency and then return the value. I went to research online.
-	Everything led to creating a new hash and using the values insite.
+	Everything led to creating a new hash and using the values inside. I went to office hours and Maria as well as one of the Students who graduated today made things more simple for me and I now understand how everything works.
 
 What questions did you have while coding? What resources did you find to help you frequency them?
 	I wanted to know how to best find the mode. I took a look at some other student's work and though up a way to make the code cleaner and faster.
@@ -54,10 +62,11 @@ What questions did you have while coding? What resources did you find to help yo
 
 What concepts are you having trouble with, or did you just figure something out? If so, what?
 
-	I am having a hard time with the injection of the hash. I understand the creation of it, but I need to understand better how the values themselves are being calculated with the frequency. I'll be going to office hours for this.
+	I am having a hard time with the injection of the hash. I understand the creation of it, but I need to understand better how the values themselves are being calculated with the frequency.
+	I went to office hours and they explained the pipeline better as well as different ways to find the right answer.
 
 Did you learn any new skills or tricks?
-	I learned how to inject hashes.
+	I learned how to inject hashes. I learned the keys method, and I also learned more about appending.
 
 How confident are you with each of the learning objectives?
 	I am a little confident, but I could be moreso. I'm doing more research on these methods so I can get better.
