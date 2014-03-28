@@ -28,13 +28,13 @@
 =begin
 
 def mode(data)
-	frequency = data.inject({}) do |num, value|
-     num[value] = data.count(value); num
+	frequency = data.inject({}) do |num_or_string, value|
+     num_or_string[value] = data.count(value); num_or_string
 	end
 	high_occurance = []
-	frequency.select do |num, value|
+	frequency.select do |num_or_string, value|
 	  if value == frequency.values.max
-	    high_occurance << num
+	    high_occurance << num_or_string
 	  end
 	end
 	return high_occurance.sort
@@ -45,8 +45,8 @@ end
 # 3. Refactored Solution
 
 def mode(data)
-	frequency = data.inject({}){|h, v| h[v] = data.count(v); h}
-	frequency.select { |h, v| v == frequency.values.max}.keys
+	frequency = data.inject({}){|num_or_string, value| num_or_string[value] = data.count(value); num_or_string}
+	frequency.select { |num_or_string, value| value == frequency.values.max}.keys
 end
 
 # 4. Reflection 

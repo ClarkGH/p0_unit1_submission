@@ -59,7 +59,7 @@ end
 
 def get_grade(array)
   sum = 0
-  grade = array.inject(0) {|sum, i| sum + i}.to_f / array.length
+  grade = array.inject(0) {|sum, integer| sum + integer}.to_f / array.length
   if grade >= 90
   	return "A"
   elsif grade >= 80

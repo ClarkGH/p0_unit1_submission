@@ -33,12 +33,12 @@ end
 
 # 3. Refactored Solution
 
-def total(array)
-	array.inject(0) {|sum, i| sum + i}
+def total(arr)
+	arr.inject(0) {|sum, i| sum + i}
 end
 
-def sentence_maker(array)
-	sentence = array.join(" ")
+def sentence_maker(arr)
+	sentence = arr.join(" ")
 	return (sentence + ".").capitalize
 end
 
