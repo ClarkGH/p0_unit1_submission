@@ -91,8 +91,7 @@ end
 =end
 
 # 4. My refactored solution:
-
-=begin
+#min_size is minimum size
 class Array
 	def pad(min_size, optional_value = nil)
 		array_clone = self.clone
@@ -105,7 +104,6 @@ class Array
 		return self
 	end
 end
-=end
 
 
 # 5. Reflection
